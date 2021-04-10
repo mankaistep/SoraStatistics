@@ -1,0 +1,16 @@
+name: SoraStatistics
+version: 1.0
+main: me.manaki.plugin.sorastatistics.SoraStatistics
+depend:
+  - PlaceholderAPI
+  - Crafts
+  - Dungeons
+  - Farms
+  - SantoryCore
+  - Shops
+commands:
+  sorastatistics:
+    permission: sorastatistics.admin
+    aliases:
+      - sorastatistic
+      - ss
