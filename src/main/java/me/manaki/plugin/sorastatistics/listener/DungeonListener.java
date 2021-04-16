@@ -26,7 +26,6 @@ public class DungeonListener implements Listener {
         for (UUID uuid : status.getPlayers()) {
             Player player = Bukkit.getPlayer(uuid);
             var sp = SoraPlayers.get(player);
-            System.out.println(player.getName());
             // Lose
             if (!win) {
                 sp.add("dungeon_lose_times", 1);
