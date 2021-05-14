@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class SoraPlayers {
 
-    private static final Map<Player, SoraPlayer> players = Maps.newHashMap();
+    private static final Map<Player, SoraPlayer> players = Maps.newConcurrentMap();
 
     private static final String HOOK = "sorastatistics";
 
