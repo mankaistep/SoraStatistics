@@ -20,7 +20,7 @@ public class DungeonListener implements Listener {
     @EventHandler
     public void onDungeonFinish(DungeonFinishEvent e) {
         String id = e.getID();
-        DStatus status = DGameUtils.getStatus(id);
+        DStatus status = e.getStatus();
         boolean win = e.getResult() == DungeonResult.WIN;
 
         for (UUID uuid : status.getPlayers()) {
