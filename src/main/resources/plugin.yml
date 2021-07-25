@@ -3,11 +3,13 @@ version: 1.0
 main: me.manaki.plugin.sorastatistics.SoraStatistics
 depend:
   - PlaceholderAPI
+softdepend:
   - Crafts
   - Dungeons
   - Farms
   - SantoryCore
   - Shops
+  - SkyBattleClient
 commands:
   sorastatistics:
     permission: sorastatistics.admin

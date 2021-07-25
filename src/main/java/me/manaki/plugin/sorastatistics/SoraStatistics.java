@@ -16,6 +16,7 @@ public class SoraStatistics extends JavaPlugin {
     public boolean hasSantoryCore;
     public boolean hasShops;
     public boolean hasFarms;
+    public boolean hasSkybattle;
 
     private BukkitRunnable task;
 
@@ -37,6 +38,7 @@ public class SoraStatistics extends JavaPlugin {
         hasSantoryCore = pm.isPluginEnabled("SantoryCore");
         hasShops = pm.isPluginEnabled("Shops");
         hasFarms = pm.isPluginEnabled("Farms");
+        hasSkybattle = pm.isPluginEnabled("SkyBattleClient");
 
         // Event
         pm.registerEvents(new StatisticListener(), this);
@@ -45,6 +47,7 @@ public class SoraStatistics extends JavaPlugin {
         if (hasSantoryCore) pm.registerEvents(new SantoryListener(), this);
         if (hasShops) pm.registerEvents(new ShopListener(), this);
         if (hasFarms) pm.registerEvents(new FarmListener(), this);
+        if (hasSkybattle) pm.registerEvents(new SkybattleListener(), this);
 
         // Saving task
         task = new BukkitRunnable() {
