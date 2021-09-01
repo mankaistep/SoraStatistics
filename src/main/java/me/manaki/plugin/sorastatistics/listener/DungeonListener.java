@@ -37,6 +37,11 @@ public class DungeonListener implements Listener {
             sp.add("dungeon_win_times", 1);
             sp.add("dungeon_win_times_" + id, 1);
             sp.add("dungeon_win_times_" + id + "_" + r.name().toLowerCase(), 1);
+
+            // Statistic
+            var ps = status.getStatistic(player);
+            sp.add("dungeon_death_times", ps.getDead());
+            sp.add("dungeon_save_times", ps.getSlaveSaved());
         }
     }
 
