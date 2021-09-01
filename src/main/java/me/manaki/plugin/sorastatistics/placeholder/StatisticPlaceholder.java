@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 public class StatisticPlaceholder extends PlaceholderExpansion {
     @Override
     public String getIdentifier() {
-        return "sora";
+        return "devicute";
     }
 
     @Override
