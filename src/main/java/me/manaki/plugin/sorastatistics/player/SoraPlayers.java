@@ -1,9 +1,7 @@
 package me.manaki.plugin.sorastatistics.player;
 
 import com.google.common.collect.Maps;
-import me.manaki.plugin.sorastatistics.SoraStatistics;
 import mk.plugin.playerdata.storage.PlayerDataAPI;
-import mk.plugin.santory.traveler.Travelers;
 import org.bukkit.entity.Player;
 
 import java.util.Map;
@@ -60,10 +58,6 @@ public class SoraPlayers {
     public static Map<String, Long> getStaticPlaceholders(Player player) {
         Map<String, Long> m = Maps.newHashMap();
         if (player == null) return m;
-
-        // Santory
-        var t = Travelers.get(player);
-        m.put("santory_player_exp", t.getData().getExp());
 
         return m;
     }
